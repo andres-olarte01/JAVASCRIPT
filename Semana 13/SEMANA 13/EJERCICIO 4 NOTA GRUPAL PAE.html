@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALIDA NOTA GRUPAL</title>
+</head>
+<body>
+    <center>
+        <img src="../IMG/incap.png" alt="" width="150" height="150">
+        <h1>VALIDACION NOTA GRUPAL PROGRAMACIOMN</h1>
+        <h2>MATERIA JAVASCRIPT</h2>
+        <script>
+            let prom=0;
+            let suma=0;
+            let num_std=1;//contador de std (son 3)
+            //proceso 1er ciclo while STD(3)
+            while (num_std<=3){
+                nomb_std=prompt("ingrese nombre estudiante");
+                let num_notas=1;// contador de notas (3) de cada std
+                //proceso 2do ciclo while notas de cada STD(3)
+                while (num_notas<=3){
+                    nota= parseFloat(prompt("INGRESE NOTA"));
+                    suma+=nota;//sumador notas std
+                    num_notas++;//contador notas - incremento
+                }
+                num_std++; //contador de std - incremento
+            }
+            //calcular nota grupal
+            prom=suma/9;
+            //salida
+            document.write("<br>");
+            document.write("************** BOLETIN DE NOTAS SEMESTRE ************"+"<br>");
+            document.write("PROMEDIO GRUPAL MATERIA PAE..."+prom.toFixed(2)+"<br>");
+        </script>
+    </center>
+</body>
+</html>
